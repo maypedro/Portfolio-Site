@@ -1,4 +1,125 @@
-
-header {
-    justify-content: center;
+/* Global Styles */
+:root {
+    --primary-color: #d32f2f; /* Red accent */
+    --background-color: #f0f0f0; /* Light gray background */
+    --text-color: #333333; /* Dark gray for readability */
+    --container-color: #ffffff; /* White for sections */
+    --hover-color: #ff5252; /* Slightly lighter red on hover */
+    --border-radius: 8px; /* Slightly rounded edges */
 }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    width: 100%;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--container-color);
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--hover-color);
+}
+
+/* Sections */
+section {
+    padding: 80px 20px;
+    max-width: 800px;
+    margin: auto;
+    background: var(--container-color);
+    border-radius: var(--border-radius);
+    margin-top: 60px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Resume and Certifications */
+#resume-certifications {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.res-cert-alignment {
+    max-width: 600px;
+    text-align: left;
+}
+
+.res-cert-alignment ul {
+    list-style: none;
+
+} 
+
+.res-cert-alignment ul li, .res-cert-alignment h3 {
+    margin: .5rem 0;
+}
+
+/* Buttons */
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+/* Project Image Hover Effect */
+.project img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 82, 82, 0.4);
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background: var(--container-color);
+    text-align: center;
+}
+
