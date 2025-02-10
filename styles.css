@@ -52,6 +52,8 @@ nav ul li a {
 
 nav ul li a:hover {
     color: var(--hover-color);
+    text-decoration: underline;
+    transition: 0.3s;
 }
 
 /* Sections */
@@ -63,6 +65,28 @@ section {
     border-radius: var(--border-radius);
     margin-top: 60px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Home */
+
+#interest-images {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+#interest-images img {
+    width: 100%;
+    max-width:400px;
+    height: 175px;
+    margin-top: 10px ;
+}
+
+#interest-images figcaption {
+    font-weight: bold;
 }
 
 /* Resume and Certifications */
@@ -85,6 +109,13 @@ section {
 
 .res-cert-alignment ul li, .res-cert-alignment h3 {
     margin: .5rem 0;
+}
+
+#resumepdf:hover {
+    transform: scale(3);
+    background-color: gray;
+    border-radius: 5px;
+
 }
 
 /* Buttons */
